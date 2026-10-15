@@ -4,11 +4,18 @@ A beautiful, offline-capable Progressive Web App (PWA) for managing your tasks. 
 
 ![Todo List App](https://img.shields.io/badge/Status-Live-brightgreen) ![PWA](https://img.shields.io/badge/PWA-Yes-blue) ![Offline](https://img.shields.io/badge/Offline-Supported-green)
 
-## 🌐 Live Demo
+---
 
-**👉 [Click here to use the app](https://YOUR-APP-NAME.vercel.app)**
+## 🌐 Live Demos
 
-Replace `YOUR-APP-NAME` with your actual Vercel deployment URL after deploying.
+### Primary Deployment (Vercel)
+**👉 [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app)**
+
+### Alternative Deployments
+- **Netlify:** [quiet-paprenjak-1d3aea.netlify.app](https://quiet-paprenjak-1d3aea.netlify.app) ⚠️
+- **Cloudflare Pages:** [to-do-list-app.syedabdulkhader190.workers.dev](https://to-do-list-app.syedabdulkhader190.workers.dev)
+
+> ⚠️ **Note:** The Netlify deployment may show a blank page due to build configuration. Please use the Vercel or Cloudflare links for the best experience.
 
 ---
 
@@ -19,7 +26,7 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 ### 🖥️ Windows
 
 **Using Chrome / Edge:**
-1. Open the app URL in Chrome or Edge
+1. Open [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app) in Chrome or Edge
 2. Look for the **install icon** (⊕) in the address bar, OR click "Install Todo List" banner
 3. Click **"Install"**
 4. The app opens as a standalone desktop app with its own window and taskbar icon
@@ -31,7 +38,7 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 ### 🍎 macOS
 
 **Using Safari:**
-1. Open the app URL in Safari
+1. Open [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app) in Safari
 2. Click **File** → **"Add to Dock"** (macOS Sonoma+)
 3. The app appears in your Dock and Launchpad
 
@@ -43,7 +50,7 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 ### 🐧 Linux
 
 **Using Chrome / Chromium:**
-1. Open the app URL
+1. Open [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app)
 2. Click the install icon (⊕) in the address bar
 3. Click **"Install"**
 4. The app appears in your application menu
@@ -54,7 +61,7 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 
 ### 📱 Android
 
-1. Open the app URL in **Chrome**
+1. Open [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app) in **Chrome**
 2. Tap the **menu** (⋮) in the top-right
 3. Tap **"Install app"** or **"Add to Home screen"**
 4. Tap **"Install"**
@@ -62,7 +69,7 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 
 ### 🍏 iOS (iPhone / iPad)
 
-1. Open the app URL in **Safari**
+1. Open [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app) in **Safari**
 2. Tap the **Share** button (□↑) at the bottom
 3. Scroll down and tap **"Add to Home Screen"**
 4. Tap **"Add"**
@@ -113,27 +120,31 @@ npm run build
 
 ---
 
-## 🌍 Deploy Your Own
+## 🌍 Deployment
 
-This app is deployed on **Vercel** (free). You can deploy your own copy:
+This app is deployed on multiple platforms for maximum reliability:
 
-### Option 1: Vercel (Recommended)
-1. Fork this repo
-2. Go to [vercel.com](https://vercel.com)
-3. Import your forked repo
-4. Click **Deploy** — done!
+### Vercel (Primary)
+- **URL:** [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app)
+- **Status:** ✅ Active
+- **Features:** Auto-deploys from GitHub, fastest for React apps
 
-### Option 2: Netlify
-1. Fork this repo
-2. Go to [netlify.com](https://netlify.com)
-3. Connect your GitHub
-4. Select the repo and deploy
+### Netlify (Alternative)
+- **URL:** [quiet-paprenjak-1d3aea.netlify.app](https://quiet-paprenjak-1d3aea.netlify.app)
+- **Status:** ⚠️ Blank page issue (build configuration needed)
+- **Fix:** Add `netlify.toml` with build settings
 
-### Option 3: GitHub Pages
-1. Fork this repo
-2. Install `gh-pages`: `npm install -D gh-pages`
-3. Add deploy script and run `npm run deploy`
-4. Enable GitHub Pages in repo settings
+### Cloudflare Pages (Alternative)
+- **URL:** [to-do-list-app.syedabdulkhader190.workers.dev](https://to-do-list-app.syedabdulkhader190.workers.dev)
+- **Status:** ✅ Active
+- **Features:** Unlimited bandwidth, global CDN
+
+### Other Platforms You Can Deploy To:
+- **GitHub Pages** — Free, integrated with GitHub
+- **Render** — 750 hours/month free
+- **Railway** — $5 credit/month
+- **Fly.io** — 3 shared VMs free
+- **Firebase Hosting** — 10GB storage free
 
 ---
 
