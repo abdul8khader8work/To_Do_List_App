@@ -5,7 +5,6 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
-    icon: path.join(__dirname, 'public/icon.svg'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -13,7 +12,7 @@ function createWindow() {
   });
 
   // Load the built web app
-  win.loadFile(path.join(__dirname, 'dist/index.html'));
+  win.loadFile(path.join(__dirname, '..', 'dist', 'index.html'));
 }
 
 app.whenReady().then(() => {

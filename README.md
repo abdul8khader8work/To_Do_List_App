@@ -162,7 +162,7 @@ Download native desktop apps from [GitHub Releases](https://github.com/abdul8kha
 
 Download the Android app from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases):
 
-- **Android (.apk)**: [Download APK](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Android.apk)
+- **Android (.apk)**: [Download APK](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Android-APK.apk)
 
 **Installation Instructions:**
 1. Download the APK file from the link above
@@ -187,37 +187,29 @@ If you want to build the apps yourself:
 ### Desktop Apps (Windows, macOS, Linux)
 
 ```bash
-# Install Electron and electron-builder
-npm install --save-dev electron electron-builder
-
 # Build the web app
 npm run build
 
 # Build for your platform
-npx electron-builder --win    # Windows .exe
-npx electron-builder --mac    # macOS .dmg
-npx electron-builder --linux  # Linux .AppImage
+npx electron-builder --win --config electron-builder.json
+npx electron-builder --mac --config electron-builder.json
+npx electron-builder --linux --config electron-builder.json
 ```
 
 ### Android APK
 
 ```bash
-# Install Capacitor
-npm install @capacitor/core @capacitor/cli @capacitor/android
-
-# Initialize Capacitor
-npx cap init "Todo List" "com.todolist.app" --web-dir=dist
-
 # Build the web app
 npm run build
 
-# Add Android platform
+# Generate the Android project (once per checkout)
 npx cap add android
 
 # Sync and build
 npx cap sync android
 cd android
-./gradlew assembleDebug
+gradlew.bat assembleDebug # Windows
+# ./gradlew assembleDebug # macOS/Linux
 ```
 
 The APK will be at: `android/app/build/outputs/apk/debug/app-debug.apk`
@@ -226,7 +218,7 @@ The APK will be at: `android/app/build/outputs/apk/debug/app-debug.apk`
 
 ## 🚀 Automated Builds
 
-This project uses GitHub Actions to automatically build desktop and mobile apps when a new release is created.
+This project uses GitHub Actions to build all desktop and Android artifacts in one run when a version tag is pushed. The release is published only after all four builds succeed.
 
 **To trigger a build:**
 ```bash

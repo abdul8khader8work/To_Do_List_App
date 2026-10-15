@@ -24,3 +24,5 @@ Thumbs.db
 npm-debug.log*
 .next/
 build/
+release/
+android/
