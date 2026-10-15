@@ -2,7 +2,7 @@
 
 ## 📥 Option 1: Download Pre-Built Apps (Easiest)
 
-Visit [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases) to download:
+Visit [GitHub Releases](https://github.com/abdul8khader8work/To_Do_List_App/releases) to download:
 
 - **Windows**: `.exe` installer
 - **macOS**: `.dmg` disk image  
@@ -26,7 +26,7 @@ GitHub Actions will automatically:
 4. Upload everything to the Releases page
 
 **Wait ~10-15 minutes** for all builds to complete, then check:
-https://github.com/abdul8khader8work/todo-list-app/releases
+https://github.com/abdul8khader8work/To_Do_List_App/releases
 
 ## 🛠️ Option 3: Build Locally
 
@@ -49,10 +49,10 @@ The app is also available as a Progressive Web App:
 
 | Platform | File Type | How to Get |
 |----------|-----------|------------|
-| Windows | `.exe` | [Download](https://github.com/abdul8khader8work/todo-list-app/releases/latest) or build locally |
-| macOS | `.dmg` | [Download](https://github.com/abdul8khader8work/todo-list-app/releases/latest) or build on Mac |
-| Linux | `.AppImage` | [Download](https://github.com/abdul8khader8work/todo-list-app/releases/latest) or build locally |
-| Android | `.apk` | [Download](https://github.com/abdul8khader8work/todo-list-app/releases/latest) or build locally |
+| Windows | `.exe` | [Download](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest) or build locally |
+| macOS | `.dmg` | [Download](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest) or build on Mac |
+| Linux | `.AppImage` | [Download](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest) or build locally |
+| Android | `.apk` | [Download](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest) or build locally |
 | iOS | PWA | Install from web browser (no .ipa available without Apple Developer account) |
 
 ---
@@ -70,5 +70,5 @@ The app is also available as a Progressive Web App:
 ## 🆘 Need Help?
 
 - **Build issues**: Check [BUILDING.md](./BUILDING.md)
-- **GitHub Actions**: Check the [Actions tab](https://github.com/abdul8khader8work/todo-list-app/actions)
-- **General questions**: [Open an issue](https://github.com/abdul8khader8work/todo-list-app/issues)
+- **GitHub Actions**: Check the [Actions tab](https://github.com/abdul8khader8work/To_Do_List_App/actions)
+- **General questions**: [Open an issue](https://github.com/abdul8khader8work/To_Do_List_App/issues)
