@@ -4,7 +4,7 @@ This guide explains how to build native desktop applications (.exe, .dmg, .AppIm
 
 ## 🚀 Quick Start (Automated Builds)
 
-The easiest way to get pre-built apps is to download them from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases/latest).
+The easiest way to get pre-built apps is to download them from [GitHub Releases](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest).
 
 If you want to trigger a new build:
 
@@ -30,14 +30,11 @@ GitHub Actions will automatically build all platforms and create a release.
 
 ```bash
 # Clone the repository
-git clone https://github.com/abdul8khader8work/todo-list-app.git
+git clone https://github.com/abdul8khader8work/To_Do_List_App.git
 cd todo-list-app
 
 # Install dependencies
-npm install
-
-# Install Electron and electron-builder
-npm install --save-dev electron electron-builder
+npm ci
 ```
 
 ### Build for Windows (.exe)
@@ -105,22 +102,16 @@ The .AppImage file will be in the `release/` directory.
 
 ```bash
 # Clone the repository
-git clone https://github.com/abdul8khader8work/todo-list-app.git
+git clone https://github.com/abdul8khader8work/To_Do_List_App.git
 cd todo-list-app
 
 # Install dependencies
-npm install
-
-# Install Capacitor
-npm install @capacitor/core @capacitor/cli @capacitor/android
-
-# Initialize Capacitor (if not already done)
-npx cap init "Todo List" "com.todolist.app" --web-dir=dist
+npm ci
 
 # Build the web app
 npm run build
 
-# Add Android platform
+# Generate the Android project (once per checkout)
 npx cap add android
 
 # Sync web assets to Android
@@ -128,7 +119,8 @@ npx cap sync android
 
 # Build the APK
 cd android
-./gradlew assembleDebug
+gradlew.bat assembleDebug # Windows
+# ./gradlew assembleDebug # macOS/Linux
 ```
 
 The APK will be at: `android/app/build/outputs/apk/debug/app-debug.apk`
@@ -194,7 +186,7 @@ For App Store distribution, you'll need to:
 
 ## 🔄 Automated Builds with GitHub Actions
 
-This project includes GitHub Actions workflows that automatically build all platforms when you create a release tag.
+The release workflow builds all platforms in a single run when you push a version tag. It publishes a release only after every platform build succeeds.
 
 ### Workflow Files
 
@@ -282,4 +274,4 @@ git push origin v1.0.0
 
 ---
 
-Need help? [Open an issue](https://github.com/abdul8khader8work/todo-list-app/issues) on GitHub.
+Need help? [Open an issue](https://github.com/abdul8khader8work/To_Do_List_App/issues) on GitHub.

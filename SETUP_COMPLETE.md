@@ -3,16 +3,17 @@
 ## 📦 What I've Created
 
 ### 1. Electron Configuration (Desktop Apps)
-- `electron/main.js` - Electron main process file
+- `electron/main.cjs` - Electron main process file
 - `electron-builder.json` - Configuration for building .exe, .dmg, .AppImage
+- `package.json` and `package-lock.json` - Locked Electron and Capacitor dependencies
 
 ### 2. Capacitor Configuration (Android App)
 - `capacitor.config.ts` - Capacitor configuration for Android builds
 
 ### 3. GitHub Actions Workflows
-- `.github/workflows/build-desktop.yml` - Builds Windows, macOS, Linux apps
-- `.github/workflows/build-android.yml` - Builds Android APK
-- `.github/workflows/release.yml` - Creates GitHub Release with all artifacts
+- `.github/workflows/build-desktop.yml` - Reusable Windows, macOS, and Linux build
+- `.github/workflows/build-android.yml` - Reusable Android APK build
+- `.github/workflows/release.yml` - Builds every platform and publishes artifacts in one release run
 
 ### 4. Documentation
 - `BUILDING.md` - Detailed guide for building apps locally
@@ -23,13 +24,9 @@
 
 ## 🚀 What You Need to Do
 
-### Step 1: Push Everything to GitHub
+### Step 1: Merge the Configuration
 
-```bash
-git add .
-git commit -m "Add desktop and mobile app build configuration"
-git push origin main
-```
+Commit these changes and merge them into the repository's default branch.
 
 ### Step 2: Trigger the First Build
 
@@ -42,17 +39,14 @@ git push origin v1.0.0
 
 ### Step 3: Wait for Builds to Complete
 
-- Go to: https://github.com/abdul8khader8work/todo-list-app/actions
-- You'll see 3 workflows running:
-  - Build Desktop Apps (Windows, macOS, Linux)
-  - Build Android APK
-  - Create Release
+- Go to: https://github.com/abdul8khader8work/To_Do_List_App/actions
+- The release workflow runs desktop and Android builds, then creates the release after both succeed.
 - **Wait 10-15 minutes** for all builds to finish
 
 ### Step 4: Check the Release
 
 Once complete, go to:
-https://github.com/abdul8khader8work/todo-list-app/releases
+https://github.com/abdul8khader8work/To_Do_List_App/releases
 
 You'll see a release (v1.0.0) with these files attached:
 - `TodoList-Windows.exe` (Windows installer)
@@ -70,14 +64,14 @@ Once the release is created, users can download from:
 
 **Latest Release:**
 ```
-https://github.com/abdul8khader8work/todo-list-app/releases/latest
+https://github.com/abdul8khader8work/To_Do_List_App/releases/latest
 ```
 
 **Direct File Links:**
-- Windows: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Windows.exe`
-- macOS: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-macOS.dmg`
-- Linux: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Linux.AppImage`
-- Android: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Android-APK.apk`
+- Windows: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Windows.exe`
+- macOS: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-macOS.dmg`
+- Linux: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Linux.AppImage`
+- Android: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Android-APK.apk`
 
 These links are already in your README.md!
 
@@ -88,7 +82,8 @@ These links are already in your README.md!
 To create a new version:
 
 ```bash
-# Update version in your code if needed
+# Update the package version before building a newer app version
+# (for example, change 1.0.0 to 1.1.0 in package.json and package-lock.json)
 git add .
 git commit -m "Update to v1.1.0"
 
@@ -171,5 +166,5 @@ GitHub Actions will automatically build and release the new version.
 
 - **Build issues**: See [BUILDING.md](./BUILDING.md)
 - **Download issues**: See [DOWNLOAD.md](./DOWNLOAD.md)
-- **GitHub Actions**: Check [Actions tab](https://github.com/abdul8khader8work/todo-list-app/actions)
-- **General questions**: [Open an issue](https://github.com/abdul8khader8work/todo-list-app/issues)
+- **GitHub Actions**: Check [Actions tab](https://github.com/abdul8khader8work/To_Do_List_App/actions)
+- **General questions**: [Open an issue](https://github.com/abdul8khader8work/To_Do_List_App/issues)

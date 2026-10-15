@@ -1,9 +1,7 @@
 name: Build Android APK
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_call:
   workflow_dispatch:
 
 jobs:
@@ -16,25 +14,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: npm
 
       - name: Setup Java JDK
         uses: actions/setup-java@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          distribution: temurin
+          java-version: "21"
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: "platform-tools platforms;android-35 build-tools;35.0.0"
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Install Capacitor
-        run: |
-          npm install @capacitor/core @capacitor/cli @capacitor/android
-          npx cap init "Todo List" "com.todolist.app" --web-dir=dist
 
       - name: Build web app
         run: npm run build
@@ -50,8 +45,14 @@ jobs:
           cd android
           ./gradlew assembleDebug
 
+      - name: Prepare APK artifact
+        run: |
+          mkdir -p artifacts
+          cp android/app/build/outputs/apk/debug/app-debug.apk artifacts/TodoList-Android-APK.apk
+
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
           name: TodoList-Android-APK
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: artifacts/TodoList-Android-APK.apk
+          if-no-files-found: error
