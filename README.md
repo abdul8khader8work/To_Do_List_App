@@ -77,6 +77,17 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 
 ---
 
+## 🎉 What's New
+
+- Dark mode support
+- Search functionality
+- Drag-and-drop task reordering
+- Priority levels and due dates
+- Data export and import
+- Keyboard shortcuts
+
+---
+
 ## ✨ Features
 
 - ✅ Add, edit, and delete todos
