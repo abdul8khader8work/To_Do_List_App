@@ -1,0 +1,25 @@
+{
+  "appId": "com.todolist.app",
+  "productName": "Todo List",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "public/icon.svg"
+  },
+  "mac": {
+    "target": "dmg",
+    "icon": "public/icon.svg"
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "public/icon.svg"
+  }
+}

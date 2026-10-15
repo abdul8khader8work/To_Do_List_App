@@ -148,6 +148,100 @@ This app is deployed on multiple platforms for maximum reliability:
 
 ---
 
+## 📥 Download Desktop & Mobile Apps
+
+### 🖥️ Desktop Applications
+
+Download native desktop apps from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases):
+
+- **Windows (.exe)**: [Download for Windows](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Windows.exe)
+- **macOS (.dmg)**: [Download for macOS](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-macOS.dmg)
+- **Linux (.AppImage)**: [Download for Linux](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Linux.AppImage)
+
+### 📱 Android App (APK)
+
+Download the Android app from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases):
+
+- **Android (.apk)**: [Download APK](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Android.apk)
+
+**Installation Instructions:**
+1. Download the APK file from the link above
+2. Open the file on your Android device
+3. If prompted, enable "Install from unknown sources" in your device settings
+4. Tap "Install" to install the app
+5. The app icon will appear on your home screen
+
+### 🍏 iOS App
+
+For iOS devices, we recommend using the PWA installation method:
+1. Open [to-do-list-app-seven-teal.vercel.app](https://to-do-list-app-seven-teal.vercel.app) in Safari
+2. Tap the Share button → "Add to Home Screen"
+3. The app will install like a native app
+
+---
+
+## 🔨 Building Desktop & Mobile Apps Locally
+
+If you want to build the apps yourself:
+
+### Desktop Apps (Windows, macOS, Linux)
+
+```bash
+# Install Electron and electron-builder
+npm install --save-dev electron electron-builder
+
+# Build the web app
+npm run build
+
+# Build for your platform
+npx electron-builder --win    # Windows .exe
+npx electron-builder --mac    # macOS .dmg
+npx electron-builder --linux  # Linux .AppImage
+```
+
+### Android APK
+
+```bash
+# Install Capacitor
+npm install @capacitor/core @capacitor/cli @capacitor/android
+
+# Initialize Capacitor
+npx cap init "Todo List" "com.todolist.app" --web-dir=dist
+
+# Build the web app
+npm run build
+
+# Add Android platform
+npx cap add android
+
+# Sync and build
+npx cap sync android
+cd android
+./gradlew assembleDebug
+```
+
+The APK will be at: `android/app/build/outputs/apk/debug/app-debug.apk`
+
+---
+
+## 🚀 Automated Builds
+
+This project uses GitHub Actions to automatically build desktop and mobile apps when a new release is created.
+
+**To trigger a build:**
+```bash
+# Create and push a tag
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+This will automatically:
+1. Build Windows .exe, macOS .dmg, Linux .AppImage
+2. Build Android APK
+3. Create a GitHub Release with all artifacts attached
+
+---
+
 ## 📄 License
 
 MIT License — free to use, modify, and distribute.
