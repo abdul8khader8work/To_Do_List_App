@@ -39,14 +39,14 @@ git push origin v1.0.0
 
 ### Step 3: Wait for Builds to Complete
 
-- Go to: https://github.com/abdul8khader8work/todo-list-app/actions
+- Go to: https://github.com/abdul8khader8work/To_Do_List_App/actions
 - The release workflow runs desktop and Android builds, then creates the release after both succeed.
 - **Wait 10-15 minutes** for all builds to finish
 
 ### Step 4: Check the Release
 
 Once complete, go to:
-https://github.com/abdul8khader8work/todo-list-app/releases
+https://github.com/abdul8khader8work/To_Do_List_App/releases
 
 You'll see a release (v1.0.0) with these files attached:
 - `TodoList-Windows.exe` (Windows installer)
@@ -64,14 +64,14 @@ Once the release is created, users can download from:
 
 **Latest Release:**
 ```
-https://github.com/abdul8khader8work/todo-list-app/releases/latest
+https://github.com/abdul8khader8work/To_Do_List_App/releases/latest
 ```
 
 **Direct File Links:**
-- Windows: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Windows.exe`
-- macOS: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-macOS.dmg`
-- Linux: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Linux.AppImage`
-- Android: `https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Android-APK.apk`
+- Windows: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Windows.exe`
+- macOS: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-macOS.dmg`
+- Linux: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Linux.AppImage`
+- Android: `https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Android-APK.apk`
 
 These links are already in your README.md!
 
@@ -166,5 +166,5 @@ GitHub Actions will automatically build and release the new version.
 
 - **Build issues**: See [BUILDING.md](./BUILDING.md)
 - **Download issues**: See [DOWNLOAD.md](./DOWNLOAD.md)
-- **GitHub Actions**: Check [Actions tab](https://github.com/abdul8khader8work/todo-list-app/actions)
-- **General questions**: [Open an issue](https://github.com/abdul8khader8work/todo-list-app/issues)
+- **GitHub Actions**: Check [Actions tab](https://github.com/abdul8khader8work/To_Do_List_App/actions)
+- **General questions**: [Open an issue](https://github.com/abdul8khader8work/To_Do_List_App/issues)

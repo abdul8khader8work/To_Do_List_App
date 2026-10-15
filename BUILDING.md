@@ -4,7 +4,7 @@ This guide explains how to build native desktop applications (.exe, .dmg, .AppIm
 
 ## 🚀 Quick Start (Automated Builds)
 
-The easiest way to get pre-built apps is to download them from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases/latest).
+The easiest way to get pre-built apps is to download them from [GitHub Releases](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest).
 
 If you want to trigger a new build:
 
@@ -30,7 +30,7 @@ GitHub Actions will automatically build all platforms and create a release.
 
 ```bash
 # Clone the repository
-git clone https://github.com/abdul8khader8work/todo-list-app.git
+git clone https://github.com/abdul8khader8work/To_Do_List_App.git
 cd todo-list-app
 
 # Install dependencies
@@ -102,7 +102,7 @@ The .AppImage file will be in the `release/` directory.
 
 ```bash
 # Clone the repository
-git clone https://github.com/abdul8khader8work/todo-list-app.git
+git clone https://github.com/abdul8khader8work/To_Do_List_App.git
 cd todo-list-app
 
 # Install dependencies
@@ -274,4 +274,4 @@ git push origin v1.0.0
 
 ---
 
-Need help? [Open an issue](https://github.com/abdul8khader8work/todo-list-app/issues) on GitHub.
+Need help? [Open an issue](https://github.com/abdul8khader8work/To_Do_List_App/issues) on GitHub.

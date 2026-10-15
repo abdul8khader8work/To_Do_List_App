@@ -105,7 +105,7 @@ This app is a **Progressive Web App (PWA)** — no app store needed! Install it 
 
 ```bash
 # Clone the repo
-git clone https://github.com/abdul8khader8work/todo-list-app.git
+git clone https://github.com/abdul8khader8work/To_Do_List_App.git
 cd todo-list-app
 
 # Install dependencies
@@ -152,17 +152,17 @@ This app is deployed on multiple platforms for maximum reliability:
 
 ### 🖥️ Desktop Applications
 
-Download native desktop apps from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases):
+Download native desktop apps from [GitHub Releases](https://github.com/abdul8khader8work/To_Do_List_App/releases):
 
-- **Windows (.exe)**: [Download for Windows](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Windows.exe)
-- **macOS (.dmg)**: [Download for macOS](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-macOS.dmg)
-- **Linux (.AppImage)**: [Download for Linux](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Linux.AppImage)
+- **Windows (.exe)**: [Download for Windows](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Windows.exe)
+- **macOS (.dmg)**: [Download for macOS](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-macOS.dmg)
+- **Linux (.AppImage)**: [Download for Linux](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Linux.AppImage)
 
 ### 📱 Android App (APK)
 
-Download the Android app from [GitHub Releases](https://github.com/abdul8khader8work/todo-list-app/releases):
+Download the Android app from [GitHub Releases](https://github.com/abdul8khader8work/To_Do_List_App/releases):
 
-- **Android (.apk)**: [Download APK](https://github.com/abdul8khader8work/todo-list-app/releases/latest/download/TodoList-Android-APK.apk)
+- **Android (.apk)**: [Download APK](https://github.com/abdul8khader8work/To_Do_List_App/releases/latest/download/TodoList-Android-APK.apk)
 
 **Installation Instructions:**
 1. Download the APK file from the link above
