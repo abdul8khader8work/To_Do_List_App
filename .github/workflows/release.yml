@@ -3,38 +3,36 @@ name: Create Release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
+
+permissions:
+  contents: write
 
 jobs:
-  build-and-release:
+  build-desktop:
+    uses: ./.github/workflows/build-desktop.yml
+
+  build-android:
+    uses: ./.github/workflows/build-android.yml
+
+  create-release:
+    needs:
+      - build-desktop
+      - build-android
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Wait for other workflows to complete
-        uses: lewagon/wait-on-check-action@v1.3.4
-        with:
-          ref: ${{ github.ref }}
-          check-name: 'Build Windows app'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
-
-      - name: Download all artifacts
+      - name: Download all build artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
+          merge-multiple: true
 
-      - name: Create Release
+      - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            artifacts/TodoList-Windows/*.exe
-            artifacts/TodoList-macOS/*.dmg
-            artifacts/TodoList-Linux/*.AppImage
-            artifacts/TodoList-Android-APK/*.apk
+            artifacts/TodoList-Windows.exe
+            artifacts/TodoList-macOS.dmg
+            artifacts/TodoList-Linux.AppImage
+            artifacts/TodoList-Android-APK.apk
           generate_release_notes: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

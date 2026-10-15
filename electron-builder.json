@@ -5,6 +5,7 @@
     "output": "release",
     "buildResources": "build"
   },
+  "publish": null,
   "files": [
     "dist/**/*",
     "electron/**/*",
@@ -12,14 +13,14 @@
   ],
   "win": {
     "target": "nsis",
-    "icon": "public/icon.svg"
+    "artifactName": "TodoList-Windows.${ext}"
   },
   "mac": {
     "target": "dmg",
-    "icon": "public/icon.svg"
+    "artifactName": "TodoList-macOS.${ext}"
   },
   "linux": {
     "target": "AppImage",
-    "icon": "public/icon.svg"
+    "artifactName": "TodoList-Linux.${ext}"
   }
 }

@@ -34,10 +34,7 @@ git clone https://github.com/abdul8khader8work/todo-list-app.git
 cd todo-list-app
 
 # Install dependencies
-npm install
-
-# Install Electron and electron-builder
-npm install --save-dev electron electron-builder
+npm ci
 ```
 
 ### Build for Windows (.exe)
@@ -109,18 +106,12 @@ git clone https://github.com/abdul8khader8work/todo-list-app.git
 cd todo-list-app
 
 # Install dependencies
-npm install
-
-# Install Capacitor
-npm install @capacitor/core @capacitor/cli @capacitor/android
-
-# Initialize Capacitor (if not already done)
-npx cap init "Todo List" "com.todolist.app" --web-dir=dist
+npm ci
 
 # Build the web app
 npm run build
 
-# Add Android platform
+# Generate the Android project (once per checkout)
 npx cap add android
 
 # Sync web assets to Android
@@ -128,7 +119,8 @@ npx cap sync android
 
 # Build the APK
 cd android
-./gradlew assembleDebug
+gradlew.bat assembleDebug # Windows
+# ./gradlew assembleDebug # macOS/Linux
 ```
 
 The APK will be at: `android/app/build/outputs/apk/debug/app-debug.apk`
@@ -194,7 +186,7 @@ For App Store distribution, you'll need to:
 
 ## 🔄 Automated Builds with GitHub Actions
 
-This project includes GitHub Actions workflows that automatically build all platforms when you create a release tag.
+The release workflow builds all platforms in a single run when you push a version tag. It publishes a release only after every platform build succeeds.
 
 ### Workflow Files
 
